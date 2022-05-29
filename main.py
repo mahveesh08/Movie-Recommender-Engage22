@@ -56,10 +56,11 @@ def get_suggestions():
 
 app = Flask(__name__)
 
-@app.route("/")
+
 @app.route("/login")
 def login():
     return render_template('login.html')
+@app.route("/")
 @app.route("/home")
 def home():
     suggestions = get_suggestions()
